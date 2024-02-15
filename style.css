@@ -6,6 +6,10 @@
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
 }
+
+body{
+    width: 100%;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -86,11 +90,18 @@ ul li{
     padding: 0 20px;
     position: relative;
 }
+#close{
+    display: none;
+}
 
-ul li a{
+ul li a,#mobile a{
     color: #1a1a1a;
     font-weight: 600;
     text-decoration: none;
+}
+#mobile {
+    display: none;
+    align-items: center;
 }
 
 ul li a:hover,
@@ -199,7 +210,6 @@ ul li .active::after{
 }
 #product1 .p{
     width: 23%;
-    min-width: 200px;
     padding: 10px 12px;
     border: 1px solid #cce7d0;
     border-radius: 20px;
@@ -302,6 +312,7 @@ font-size: 12px;
     background-position: center;
     height: 50vh;
     min-width: 420px;
+    width: 48%;
     padding: 30px;
 }
 #sm-banner .box-2{
@@ -484,7 +495,207 @@ footer .copyright{
     text-align: center;
 }
 
+@media (max-width: 799px) {
+    ul {
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, .1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }   
+    ul li{
+        margin-bottom: 25px;
+    }
+    #mobile {
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+    }
+    #mobile a{
+        color: #1a1a1a;
+        padding-right: 25px;
+    }
+    #close{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 18px;
+        display: initial;
+    }
+    #lg-bag{
+        display: none;
+    }
+    #hero {
+        height: 70vh;
+        background-position:top 30% right 36%;
+        padding: 0 38px;
+    }
+    #feature {
+        padding: 20px 30px;
+    }
+    #feature .f-box {
+        width: 200px;
+    }
+    .p-container {
+        justify-content: center;
+    }
+    #product1 .p {
+        width: 40%;
+        margin: 15px 20px;
+    }
+    #banner {
+        height: 20vh;
+    }
+    #sm-banner .banner-box {
+        height: 30vh;
+        min-width: 100%;
+        padding: 30px;
+    }
+    #sm-banner{
+        padding: 20px 20px;
+    }
+    #tx-banner {
+        padding: 0 20px;
+    }
+    #tx-banner .banner-box {
+        height: 25vh;
+    }
+    #tx-banner h2 {
+        font-size: 17px;
+    }
+    #tx-banner h3 {
+        font-size: 12px;
+    }
 
+}
+@media (max-width:477px) {
+    .header {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    #hero {
+        height: 50vh;
+        background-position: 45%;
+        padding: 0 20px;
+    }
+    #hero h2 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    #hero h1 {
+        font-size: 30px;
+        line-height: 50px;
+    }
+    p {
+        font-size: 12px;
+        margin: 0px 0 20px 0;
+    }
+    #hero h4 {
+        padding-bottom: 8px;
+    }
+    ul {
+        height: 100vh;
+        width: 170px;
+    }
+    #feature {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 20px 20px;
+    }
+    #feature .f-box {
+        width: 48%;
+    }
+    #product1 .p {
+        margin: 15px 0px;
+        width: 48%;
+    }
+    .p-container {
+        justify-content: space-between;
+    }
+    #product1 {
+        padding: 20px 20px;
+    }
+    #product1 h2 {
+        font-size: 35px;
+    }
+    #banner h2 {
+        font-size: 18px;
+        padding: 0;
+    }
+    #banner h4 {
+        font-size: 12px;
+    }
+    button.normal {
+        padding: 8px 15px;
+    }
+    #banner {
+        height: 17vh;
+        padding: 10px;
+    }
+    #tx-banner h2 {
+        font-size: 9px;
+        line-height: 10px;
+    }
+    #tx-banner h3 {
+        font-size: 6px;
+    }
+    #tx-banner .banner-box {
+        height: 15vh;
+        width: 30%;
+    }
+    #newsletters .form {
+        width: 100%;
+    }
+    #newsletters button {
+        height: 2rem;
+    }
+    #newsletters input {
+        height: 2rem;
+    }
+    .footer {
+        padding: 20px 20px;
+    }
+    footer .logo {
+        margin-bottom: 20px;
+        width: 80px;
+    }
+    footer .install .row img {
+        margin-left: 5px;
+    }
+    footer .follow i {
+        font-size: 11px;
+        padding-bottom: 5px;
+    }
+    footer h4 {
+        padding-bottom: 10px;
+    }
+    .copyright p{
+        margin: 0;
+    }
+    .install p{
+        margin-bottom: 10px;
+    }
+    #mar{
+        margin: 0;
+    }
+    .section-m1 {
+        margin: 20px 0;
+    }
+}
 
 
 
