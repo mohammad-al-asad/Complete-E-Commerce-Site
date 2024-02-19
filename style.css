@@ -616,7 +616,7 @@ footer .copyright{
     z-index: -99;
 }
 
-/* About us page */
+/* About page */
 #page-header.about-header{
     background-image: url(img/about/banner.png);
 
@@ -646,6 +646,105 @@ footer .copyright{
     height: 100%;
     border-radius: 20px;
 }
+
+/* Contact Page */
+#contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+#contact-details .details{
+    width: 40%;
+}
+#contact-details .details span,
+#form-details form span{
+    font-size: 12px;
+}
+#contact-details .details h2,
+#form-details form h2{
+    font-size: 26px;
+    line-height: 30px;
+    padding: 10px 0;
+}
+#contact-details .details h3{
+    font-size: 14px;
+    line-height: 35px;
+    padding-bottom: 15px;
+}
+#contact-details .contact li{
+    display: flex;
+    list-style: none;
+    padding: 10px 0;
+}
+#contact-details .contact li i{
+    font-size: 14px;
+    padding-right: 22px;
+}
+#contact-details .contact li p{
+    font-size: 14px;
+    margin: 0;
+}
+#contact-details .map{
+    width: 55%;
+    height: 300px;
+}
+#contact-details iframe{
+    width: 100%;
+    height: 100%;
+}
+#form-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 50px 50px;
+    border: 1px solid #e1e1e1;
+}
+#form-details form{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+#form-details form input,
+#form-details form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+#form-details form button{
+    background-color: #088178;
+    color: #fff;
+}
+.people{
+    margin-top: 60px;
+}
+.people div{
+    padding-bottom: 25px;
+    padding-left: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+.people div img{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+.people div p{
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+.people div p span{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
 
 
 /* Media Query */
@@ -782,6 +881,16 @@ footer .copyright{
         #about div {
             margin-top: 30px;
             padding-left: 0px;
+        }
+        /* Contact Page */
+        #form-details {
+            padding:30px;
+        }
+        .people div p {
+            line-height: 15px;
+        }
+        .people div p span {
+            margin-bottom: 4px;
         }
 }
 
@@ -960,6 +1069,30 @@ footer .copyright{
     }
     #about-app .video{
         width: 100%;
+    }
+    /* Contact Page */
+    #contact-details {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+    #contact-details .details {
+        width: 100%;
+    }
+    #contact-details .map {
+        width: 100%;
+        margin-top: 40px;
+    }
+    #form-details {
+        flex-direction: column;
+        margin: 20px;
+        padding: 50px 30px 20px 30px;
+    }
+    #form-details form {
+        width: 100%;
+    }
+    .people div {
+        padding-left: 0px;
     }
 }
 
