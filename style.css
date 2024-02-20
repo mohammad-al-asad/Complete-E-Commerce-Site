@@ -93,10 +93,13 @@ ul li a,#mobile a{
     align-items: center;
 }
 ul li a:hover,
-ul li .active{
+#mobile a:hover,
+#mobile i:hover,
+#bar-a:hover,
+ul li .active,
+#mobile .active{
     color: #088178;
 }
-
 ul li .active::after{
     content: '';
     background-color: #088178;
@@ -104,13 +107,13 @@ ul li .active::after{
     position: absolute;
     height: 2px;
     bottom: -4px;
-    left: 20px;
+    left: 19px;
 }
 
 
 /* Home Page*/
 #hero{
-    background-image: url(img/hero4.png);
+    background-image: url("img/hero4.png");
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -128,7 +131,7 @@ ul li .active::after{
     color: #088178;
 }
 #hero button{
-    background-image: url(img/button.png);
+    background-image: url("img/button.png");
     border: 0;
     color: #088178;
     background-repeat: no-repeat;
@@ -255,7 +258,7 @@ font-size: 12px;
    flex-direction: column;
    justify-content: center;
    align-items: center; 
-   background-image: url(img/banner/b2.jpg);
+   background-image: url("img/banner/b2.jpg");
    background-size: cover;
    background-position: center;
    height: 40vh;
@@ -340,7 +343,7 @@ button.white{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start; 
-    background-image: url(img/banner/b7.jpg);
+    background-image: url("img/banner/b7.jpg");
     background-size: cover;
     background-position: center;
     height: 35vh;
@@ -618,8 +621,7 @@ footer .copyright{
 
 /* About page */
 #page-header.about-header{
-    background-image: url(img/about/banner.png);
-
+    background-image: url("img/about/banner.png");
 }
 #about{
     display: flex;
@@ -634,6 +636,7 @@ footer .copyright{
     padding-left: 40px;
 }
 #about-app{
+    padding-top: 30px;
     text-align: center;
 }
 #about-app .video{
@@ -713,6 +716,7 @@ footer .copyright{
     outline: none;
     margin-bottom: 20px;
     border: 1px solid #e1e1e1;
+    resize: none;
 }
 #form-details form button{
     background-color: #088178;
@@ -744,6 +748,106 @@ footer .copyright{
     font-weight: 600;
     color: #000;
 }
+
+/* Cart Page */
+#page-header.cart-header{
+    background-image: url("img/about/banner.png");
+}
+
+#cart{
+    overflow: auto;
+}
+#cart table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+#cart table img{
+    width: 70px;
+}
+#cart table td:nth-child(1){
+    width: 90px;
+    text-align: center;
+}
+#cart table td:nth-child(2),
+#cart table td:nth-child(4),
+#cart table td:nth-child(5),
+#cart table td:nth-child(6){
+    width: 140px;
+    text-align: center;
+}
+#cart table td:nth-child(3){
+    width: 240px;
+    text-align: center;
+}
+#cart table td:nth-child(5) input{
+    width: 70px;
+    padding: 8px 3px 8px 12px;
+}
+#cart table thead{
+    border: 1px solid #e2e9e1;
+    border-left: none;
+    border-right: none;
+}
+#cart table thead td{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 18px 0;
+}
+#cart table tbody td{
+    padding-top: 15px;
+}
+#cart table tbody td{
+    font-size: 13px;
+}
+#checkout{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#checkout #coupon{
+    padding-top: 20px;
+    width: 50%;
+}
+#checkout #coupon h3,
+#subtotal h3{
+    padding-bottom: 15px;
+}
+#checkout #coupon input{
+    padding: 10px 20px;
+    outline: none;
+    width: 60%;
+    margin-right: 10px;
+    border: 1px solid #e2e9e1;
+}
+#checkout #coupon button,
+#subtotal button{
+    background-color: #088178;
+    color: #fff;
+    padding: 12px 20px;
+}
+#subtotal{
+    width: 50%;
+    margin-bottom: 30px;
+    border: 1px solid #e2e9e1;
+    padding: 30px;
+}
+#subtotal table{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#subtotal table td{
+    width: 50%;
+    border: 1px solid #e2e9e1;
+    font-size: 13px;
+    padding: 10px;
+}
+
+
+
 
 
 
@@ -891,6 +995,10 @@ footer .copyright{
         }
         .people div p span {
             margin-bottom: 4px;
+        }
+        /* Cart Page */
+        #checkout #coupon button, #subtotal button {
+            margin-top: 20px;
         }
 }
 
@@ -1093,6 +1201,20 @@ footer .copyright{
     }
     .people div {
         padding-left: 0px;
+    }
+
+    /* Cart Page */
+    #checkout {
+        flex-direction: column;
+    }
+
+    #checkout #coupon {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    #subtotal {
+        width: 100%;
+        padding: 20px;
     }
 }
 
